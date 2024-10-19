@@ -1,0 +1,63 @@
+Alpha Beta pruning
+
+Normal:
+depth 2 => 150 à 600 , env 3.3 sec / move
+depth 3 => 9k à 14k , env 84 sec /move
+depth 4 => trop long
+
+Sorted:
+depth 2 => env 120.4 en pruning, env. 1 sec/move
+depth 3 => env 6 769  en pruning, env 32 sec/move
+depth 4 => 13k en pruning, > 120 sec/move
+depth 5 => trop long
+
+Sorted // 2:
+depth 2 => env 55 en pruning, env. 0.3 sec/move
+depth 3 => env 902 en pruning, env. 3.8 sec/move
+depth 4 => env 2121 en pruning, env. 15 sec/move
+depth 5 => env 27000 en pruning, env. 187 sec/move
+depth 6 => trop long
+
+Sorted // 3:
+depth 2 => env. 0.26 sec/move
+depth 3 => env. 2.26 sec/move
+depth 4 => env. 8.2 sec/move
+depth 5 => env. 35 sec/move
+depth 6 => trop long
+depth 7 => trop long
+
+Sorted // 4:
+depth 2 => env 25 en pruning, env. 0.15 sec/move
+depth 3 => env 270 en pruning, env. 0.8 sec/move
+depth 4 => env 840 en pruning, env. 3.96 sec/move
+depth 5 => env 3500 en pruning, env. 19.8 sec/move
+depth 6 => 16 117 en pruning, env. 169 sec/move
+depth 7 => trop long
+
+Sorted // 6:
+3 => 0.12
+4 => 6
+5 => 5.78
+6 => 19.17 sec
+7 => trop long
+
+===========================================================================
+ALIEN: sorted2 d4 (my_player2) vs sorted6 d5 (my_player)   => w: my_player2
+ALIEN:            (my_player)  vs            (my_player2)  => w: my_player2
+NORMAL:                                                    => w: my_player !!!!!!!!!!!!!!
+===========================================================================
+ALIEN: sorted2 d4 (my_player2) vs sorted4 d5 (my_player)   => w: my_player2
+ALIEN:            (my_player)  vs            (my_player2)  => w: my_player2
+NORMAL:                                                    => w: equal
+===========================================================================
+ALIEN: sorted d2 (my_player) vs sorted2 d4 (my_player2)    => w: my_player2
+ALIEN:           (my_player2) vs           (my_player)     => w: my_player2
+NORMAL:                                                    => w: my_player2
+===========================================================================
+ALIEN: sorted2 d4 (my_player2) vs sorted1.5 d3 (my_player) => w: my_player2
+ALIEN:            (my_player) vs              (my_player2) => w: my_player2
+NORMAL:                                                    => w: my_player2
+===========================================================================
+ALIEN: sorted2 d4 (my_player2) vs sorted3 d5 (my_player)   => w: my_player2
+ALIEN:            (my_player)  vs            (my_player2)  => w: my_player2
+NORMAL:                                                    => w: my_player2
