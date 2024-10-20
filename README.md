@@ -12,6 +12,8 @@ We conducted a tournament against other competitive agents, and our agent emerge
 
 For this code sample, I have removed the MCTS implementation and only kept the MiniMax algorithm, as it is part of my master's application.
 
+You can visualize the tournament results (brackets) by visiting the following link: [Tournament Results](https://challonge.com/fr/ykol0oke). My team name was "mayoman".
+
 ## Code
 
 You can find my MiniMax implementation in the following file:
