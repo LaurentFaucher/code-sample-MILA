@@ -6,6 +6,8 @@ This is an implementation of a competitive agent for the Abalone game.
 
 Abalone is a two-player abstract strategy board game where the objective is to push six of the opponent's marbles off the edge of the board. Players take turns moving one, two, or three of their marbles in a straight line or laterally.
 
+![Abalone Game](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF00I4acHY56YUJJOg8fN-d_meUwbK0CEmJQ&s)
+
 ## Project Overview
 
 We conducted a tournament against other competitive agents, and our agent emerged victorious. This was a team project where my teammate implemented the Monte Carlo Tree Search (MCTS) algorithm, and I implemented the MiniMax algorithm. After comparing both approaches, we found that MiniMax performed better, so we used it for the tournament.
