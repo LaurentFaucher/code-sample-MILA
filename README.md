@@ -59,4 +59,20 @@ In the above graph, I tested different configurations of the minimax algorithm a
 - **Sorted // 4**: only the first quarter of sorted actions is explored
 - **Sorted // 6**: only the first sixth of sorted actions is explored
 
-As shown in Graph 1, action sorting and action selection enable a more in-depth search. For a configuration to be considered viable, the search time must be less than 40 seconds, as we only have 900 seconds to make 25 moves during the tournament.
+As shown in Graph 1, action sorting and action selection enable a more in-depth search. For a configuration to be considered viable, the search time must be less than 40 seconds, as we only have 900 seconds to make 25 moves during the tournament. The following configurations were therefore selected to compare their performance (see Graph 1):
+
+- **C0**: Normal → Depth 2
+- **C1**: Sorted → Depth 3
+- **C2**: Sorted // 2 → Depth 4
+- **C3**: Sorted // 3 → Depth 5
+- **C4**: Sorted // 4 → Depth 5
+- **C5**: Sorted // 6 → Depth 6
+
+To determine the best configuration among these, I organized a tournament (see Graph 2) between them to see which would perform best. Each configuration played 3 matches against each other.
+
+#### Graph 2: Configuration tournament results
+<div align="center">
+  <img src="Abalone/plots/tournament_results.png" alt="Depth search time depending on sorted actions">
+</div>
+
+As shown in Graph 2, the C2 configuration dominates all the others. This means that a minimax with pruning, where only the first half of the sorted actions are explored, gives the best results in the contest. So there's a trade-off between search width and search depth. For example, by exploring only the first sixth of the sorted actions, it is possible to anticipate up to 6 moves. However, sometimes it's beneficial to explore more moves, even at the expense of the quality of the immediate solution, in order to reach a more favorable final state. That's why our configuration, which explores half the moves, performs better, even if it doesn't go as deep into the search as C5.
