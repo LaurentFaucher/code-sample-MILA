@@ -6,7 +6,9 @@ This is an implementation of a competitive agent for the Abalone game.
 
 Abalone is a two-player abstract strategy board game where the objective is to push six of the opponent's marbles off the edge of the board. Players take turns moving one, two, or three of their marbles in a straight line or laterally.
 
-![Abalone Game](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF00I4acHY56YUJJOg8fN-d_meUwbK0CEmJQ&s)
+<div align="center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF00I4acHY56YUJJOg8fN-d_meUwbK0CEmJQ&s" alt="Abalone Game">
+</div>
 
 ## Project Overview
 
