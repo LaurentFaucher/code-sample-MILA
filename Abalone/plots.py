@@ -32,8 +32,8 @@ def minimax_time_plot():
 
     plt.legend()
 
-    plt.xlabel('Profondeur')
-    plt.ylabel('Temps (s)')
+    plt.xlabel('Depth')
+    plt.ylabel('Time (s)')
 
     plt.grid(True)
     plt.savefig('minimax_time_plot.png')
@@ -53,6 +53,6 @@ def MCTS_time_plot():
     plt.savefig('MCTS_time_plot.png')
     plt.show()
 
-MCTS_time_plot()
+minimax_time_plot()
 
 
