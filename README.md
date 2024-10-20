@@ -46,6 +46,17 @@ I soon noticed that a basic implementation of the minimax algorithm was not suff
 
 I optimized pruning by sorting possible actions before visiting them. In the max_value() function, I opted for a descending sorting of our actions according to our heuristics before exploring them. In the min_value() function, I opted for an ascending sorting of our actions before exploring them. This slight adjustment enabled our algorithm to perform more efficient branch pruning in the search tree, allowing us to reach a depth of 3 with an average search time of 35 seconds. This represents a difference of 49 seconds compared with the algorithm without sorting for the same depth.
 
+#### Graph 1: Depth search time depending on sorted actions
 <div align="center">
-  <img src="Abalone/plots/minimax_time_plot.png" alt="Search time depending by depth depending on sorted actions">
+  <img src="Abalone/plots/minimax_time_plot.png" alt="Depth search time depending on sorted actions">
 </div>
+
+In the above graph, I tested different configurations of the minimax algorithm and pruning 𝞪-𝞫 to evaluate the time required to reach different depths:
+- **Normal**: algorithm without action sorting
+- **Sorted**: algorithm with action sorting
+- **Sorted // 2**: only the first half of the sorted actions is explored
+- **Sorted // 3**: only the first third of sorted actions is explored
+- **Sorted // 4**: only the first quarter of sorted actions is explored
+- **Sorted // 6**: only the first sixth of sorted actions is explored
+
+As shown in Graph 1, action sorting and action selection enable a more in-depth search. For a configuration to be considered viable, the search time must be less than 40 seconds, as we only have 900 seconds to make 25 moves during the tournament.
