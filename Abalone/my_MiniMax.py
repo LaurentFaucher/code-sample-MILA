@@ -26,7 +26,6 @@ class MyPlayer(PlayerAbalone):
         super().__init__(piece_type,name,time_limit,*args)
         self.move_counter = 0
         self.normal_config = False
-        #self.border_keys1 = [(4,0), (3,1), (2,2), (1,3), (0,4), (1,5), (2,6), (3,7), (4,8), (6,8), (8,8), (10,8), (12,8), (13,7), (14,6), (15,5), (16,4), (15,3), (14,2), (13,1), (12,0), (10,0), (8,0), (6,0)]
         self.border_keys1 = [tuple(map(int, line.strip().split(','))) for line in open('border_keys.txt')]
 
     def cutoff_depth(d):
@@ -253,7 +252,7 @@ class MyPlayer(PlayerAbalone):
 
         return ((other_score - actual_score) * g_multiplier) + (border_score * b_multiplier)
     
-    def combined_heuristic(self, state: GameState, player: Player): #H
+    def combined_heuristic(self, state: GameState, player: Player): 
         """
         Calculate the combined heuristic score for the given player in the current game state.
 

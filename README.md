@@ -12,16 +12,16 @@ Abalone is a two-player abstract strategy board game where the objective is to p
 
 ## Code
 
-You can find my optimized Minimax with Alpha-Beta Pruning implementation in the following file:
+You can find my optimized Minimax algorithm with Alpha-Beta Pruning implementation in the following file:
 [Link to my_MiniMax.py](Abalone/my_MiniMax.py)
 
 This is the only relevant file for this code sample.
 
 ## Project Overview
 
-We conducted a tournament against other competitive agents, and our agent emerged victorious. This was a team project where my teammate implemented the Monte Carlo Tree Search (MCTS) algorithm, and I implemented the MiniMax algorithm. After comparing both approaches, we found that MiniMax performed better, so we used it for the tournament. We had to manage our time efficiently, as each game was limited to 900 seconds.
+In a tournament featuring 39 competitive agents, my algorithm secured first place. This was a collaborative project where my teammate implemented a Monte Carlo Tree Search (MCTS) algorithm, while I developed the MiniMax algorithm. After testing both approaches, we determined that MiniMax outperformed MCTS and used it for the competition. The algorithm was designed to handle strict time constraints, as each game was limited to 900 seconds.
 
-For this code sample, I have removed the MCTS implementation and only kept the MiniMax algorithm, as it is part of my master's application.
+For this code sample, I’ve removed the MCTS implementation and included only the MiniMax algorithm, which I authored for the contest.
 
 You can visualize the tournament results (brackets) by visiting the following link: [Tournament Results](https://challonge.com/fr/ykol0oke). My team name was "mayoman".
 
